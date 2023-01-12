@@ -1,0 +1,142 @@
+{
+  "formatVersion": 1,
+  "database": {
+    "version": 2,
+    "identityHash": "c1760e1cf4456632957953afaa42bf66",
+    "entities": [
+      {
+        "tableName": "CardDataDatabaseEntity",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`cardNumberEntity` TEXT NOT NULL, `insertTimeMark` TEXT NOT NULL, `numberLength` INTEGER, `numberLuhn` INTEGER, `scheme` TEXT, `type` TEXT, `brand` TEXT, `prepaid` INTEGER, `countryNumeric` TEXT, `countryAlpha2` TEXT, `countryName` TEXT, `countryEmoji` TEXT, `countryCurrency` TEXT, `countryLatitude` INTEGER, `countryLongitude` INTEGER, `bankName` TEXT, `bankUrl` TEXT, `bankPhone` TEXT, `bankCity` TEXT, PRIMARY KEY(`cardNumberEntity`))",
+        "fields": [
+          {
+            "fieldPath": "cardNumberEntity",
+            "columnName": "cardNumberEntity",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "insertTimeMark",
+            "columnName": "insertTimeMark",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "numberLength",
+            "columnName": "numberLength",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "numberLuhn",
+            "columnName": "numberLuhn",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "scheme",
+            "columnName": "scheme",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "type",
+            "columnName": "type",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "brand",
+            "columnName": "brand",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "prepaid",
+            "columnName": "prepaid",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "countryNumeric",
+            "columnName": "countryNumeric",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "countryAlpha2",
+            "columnName": "countryAlpha2",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "countryName",
+            "columnName": "countryName",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "countryEmoji",
+            "columnName": "countryEmoji",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "countryCurrency",
+            "columnName": "countryCurrency",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "countryLatitude",
+            "columnName": "countryLatitude",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "countryLongitude",
+            "columnName": "countryLongitude",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "bankName",
+            "columnName": "bankName",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "bankUrl",
+            "columnName": "bankUrl",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "bankPhone",
+            "columnName": "bankPhone",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "bankCity",
+            "columnName": "bankCity",
+            "affinity": "TEXT",
+            "notNull": false
+          }
+        ],
+        "primaryKey": {
+          "columnNames": [
+            "cardNumberEntity"
+          ],
+          "autoGenerate": false
+        },
+        "indices": [],
+        "foreignKeys": []
+      }
+    ],
+    "views": [],
+    "setupQueries": [
+      "CREATE TABLE IF NOT EXISTS room_master_table (id INTEGER PRIMARY KEY,identity_hash TEXT)",
+      "INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, 'c1760e1cf4456632957953afaa42bf66')"
+    ]
+  }
+}

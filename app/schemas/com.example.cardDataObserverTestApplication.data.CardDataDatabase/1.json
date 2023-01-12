@@ -1,0 +1,58 @@
+{
+  "formatVersion": 1,
+  "database": {
+    "version": 1,
+    "identityHash": "25f31a22181914395aaf1fa83c848963",
+    "entities": [
+      {
+        "tableName": "CardDataDatabaseEntity",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`cardNumberEntity` TEXT NOT NULL, `insertTimeMark` TEXT NOT NULL, `scheme` TEXT NOT NULL, `type` TEXT NOT NULL, `brand` TEXT NOT NULL, PRIMARY KEY(`cardNumberEntity`))",
+        "fields": [
+          {
+            "fieldPath": "cardNumberEntity",
+            "columnName": "cardNumberEntity",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "insertTimeMark",
+            "columnName": "insertTimeMark",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "scheme",
+            "columnName": "scheme",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "type",
+            "columnName": "type",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "brand",
+            "columnName": "brand",
+            "affinity": "TEXT",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "columnNames": [
+            "cardNumberEntity"
+          ],
+          "autoGenerate": false
+        },
+        "indices": [],
+        "foreignKeys": []
+      }
+    ],
+    "views": [],
+    "setupQueries": [
+      "CREATE TABLE IF NOT EXISTS room_master_table (id INTEGER PRIMARY KEY,identity_hash TEXT)",
+      "INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, '25f31a22181914395aaf1fa83c848963')"
+    ]
+  }
+}
